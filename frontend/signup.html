@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            color: #d81b60;
+        }
+
+        h2 {
+            color: #ad1457;
+            margin-bottom: 20px;
+        }
+
+        .container {
+        background-color: #f8bbd0; 
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        max-width: 800px; 
+        width: 100%;
+        margin: 20px auto;
+    }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #880e4f;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #d81b60;
+            background-color: #fce4ec;
+            color: #880e4f;
+        }
+
+        input::placeholder {
+            color: #ad1457;
+        }
+
+        select {
+            background-color: #f8bbd0;
+        }
+
+        select:focus, input:focus {
+            border-color: #ad1457;
+            outline: none;
+        }
+
+        button {
+            background-color: #e57373;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #d32f2f;
+        }
+
+        a {
+            color: #880e4f;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #880e4f;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Join the Portfolio Platform!</h1>
+    </header>
+    <h2>Create an Account</h2>
+    <div class="container">
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="firstName">Given Name</label>
+                <input type="text" id="firstName" placeholder="Enter your first name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Surname</label>
+                <input type="text" id="lastName" placeholder="Enter your last name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Your Age</label>
+                <input type="number" id="age" placeholder="Enter your age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Select Gender</label>
+                <select id="gender" required>
+                    <option value="" disabled selected>Choose your gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="username">Choose Username</label>
+                <input type="text" id="username" placeholder="Create a username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Set Password</label>
+                <input type="password" id="password" placeholder="Create a password" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Assign Role</label>
+                <select id="role" required>
+                    <option value="" disabled selected>Choose a role</option>
+                    <option value="editor">Editor</option>
+                    <option value="admin">Administrator</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="twoFactorEnabled">
+                    Enable Two-Factor Authentication
+                </label>
+            </div>
+            <button type="submit">Create Account</button>
+        </form>
+        <p>Already registered? <a href="/login">Sign in here</a></p>
+    </div>
+    <footer>
+        <p>Created by Alibek Anel | BDA-2302</p>
+    </footer>
+    
+    <script src="signup.js" defer></script>
+</body>
+</html>

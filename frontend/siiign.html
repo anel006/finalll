@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Your Account</title>
+    <script src="signup.js" defer></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec; 
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+
+        h2 {
+            color: #d81b60; 
+            margin-bottom: 30px;
+        }
+
+        form {
+            background-color: #f8bbd0; 
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #880e4f;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #d81b60;
+            background-color: #fce4ec;
+        }
+
+        input::placeholder {
+            color: #ad1457;
+        }
+
+        select {
+            background-color: #f8bbd0;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #e57373;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <h2>Create Your Account</h2>
+    <form id="registerForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Choose a username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Create a password" required>
+
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" placeholder="Your first name" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" placeholder="Your last name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter your age" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+            <option value="" disabled selected>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="role">Role:</label>
+        <select id="role" required>
+            <option value="" disabled selected>Choose a role</option>
+            <option value="admin">Administrator</option>
+            <option value="editor">Editor</option>
+        </select>
+
+        <label>
+            <input type="checkbox" id="twoFA">
+            Enable Two-Factor Authentication
+        </label>
+
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>

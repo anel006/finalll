@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/js/logout.js" defer></script>
+</head>
+<body>
+    <h2>Admin</h2>
+    <button onclick="logout()">Log Out</button>
+
+    <div>
+        <h3>Weather Data</h3>
+        <input type="text" id="city" placeholder="Enter city">
+        <button onclick="fetchWeatherData(document.getElementById('city').value)">Get Weather</button>
+        <pre id="weather-info"></pre>
+    </div>
+    <footer>
+        <p>Alibek Anel BDA-2302</p>
+    </footer>
+</body>
+<script>
+    async function fetchWeatherData(city) {
+        const response = await fetch(`/api/weather/${city}`);
+        const data = await response.json();
+        document.getElementById('weather-info').innerText = JSON.stringify(data, null, 2);
+    }
+</script>
+</html>
